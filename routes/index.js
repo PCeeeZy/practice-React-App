@@ -9,9 +9,9 @@ const apiRoutes = require('./api');
 router.use('/api', apiRoutes); //localhost:3000/api
 
 // any other route--send em to the build index.html
-router.use((req, res) => {
-    res.sendFile(path.join(__dirname, '../../client/build/index.html'))
-});
+// router.use((req, res) => {
+//     res.sendFile(path.join(__dirname, '../../client/build/index.html'))
+// });
 
 // export it!
 module.exports = router;
