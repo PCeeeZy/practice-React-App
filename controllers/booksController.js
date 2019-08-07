@@ -6,10 +6,24 @@ const db = require('../models');
 
 module.exports = {
     findAll: (req, res) => {
-        res.send(`find all is hit`)
+        db.Book.find({
+            //all
+        }).then(dbBooks => {
+            res.json(dbBooks)
+        }).catch(err => {
+            res.err(err)
+        })
     },
     findById: (req, res) => {
-        res.send(`findbyId is hit. Id is ${req.params.id}`)
+        db.Book.findOne({
+            id: req.params.id
+        })
+        .then(singleBook => {
+            res.json(singleBook)
+        })
+        .catch(err => {
+            res.err(err)
+        })
     },
     addBook: (req, res) => {
         res.send(`addbook is hit. Id is ${req.params.id}`)
