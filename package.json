@@ -23,6 +23,6 @@
   "homepage": "https://github.com/PCeeeZy/practice-React-App#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.6.8"
+    "mongoose": "^5.7.5"
   }
 }
